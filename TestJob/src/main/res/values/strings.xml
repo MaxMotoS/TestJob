@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Test Job</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="label_activity_applicant">Заполните резюме</string>
+    <string name="label_full_name">ФИО</string>
+    <string name="label_birth_day">Дата рождения</string>
+    <string name="label_sex">Пол</string>
+    <string name="label_office">Должность</string>
+    <string name="label_wages">Зарплата</string>
+    <string name="label_phone_number">Моб. тел.</string>
+    <string name="label_email">e-mail</string>
+    <string name="label_send_cv">Отправить резюме</string>
+    <string name="title_activity_activity2">Activity-2</string>
+    <string name="label_activity_employer">Анкета</string>
+    <string name="label_activity_2_mail">Письмо соискателю</string>
+    <string name="label_send_answer">Отправить</string>
+    <string name="hint_full_name">Иванов Иван Иванович</string>
+    <string name="hint_birth_day">01.01.1990</string>
+    <string name="hint_office">Инженер</string>
+    <string name="label_activity_send_cv">Резюме</string>
+    <string name="label_activity_employer2">Панель работадателя</string>
+    <string name="welcome">Добро пожаловать!</string>
+    <string name="button_fill_cv_form">Заполнить резюме</string>
+    <string name="description">Эта программа является тестовым заданием для поступления в Школу программистов</string>
+    <string name="label_answer">Ответ от работадателя</string>
+    <string name="label_write_answer">Ответить</string>
+    <string-array name="sex_array">
+        <item>Выберите пол</item>
+        <item>Мужской</item>
+        <item>Женский</item>
+    </string-array>
+
+</resources>
