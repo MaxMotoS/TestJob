@@ -133,8 +133,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="phone"
-			android:digit="+0123456789"
-                android:hint="+79251234567"
+			    android:hint="+79251234567"
                 />
     </LinearLayout>
 
