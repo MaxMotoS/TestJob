@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v4.widget.SimpleCursorAdapter;
-import android.view.Menu;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
@@ -79,13 +78,13 @@ public class ApplicantActivity extends Activity {
                 ((EditText) findViewById(R.id.wages)).getText().toString().equals("") ||
                 ((EditText) findViewById(R.id.phone_number)).getText().toString().equals("") ||
                 ((EditText) findViewById(R.id.email)).getText().toString().equals("")) {
-            Alerts.swowAlertError("Все поля должны быть заполнены", this);
+            Alerts.showAlertError("Все поля должны быть заполнены", this);
             return false;
         }
 
         String email = ((EditText) findViewById(R.id.email)).getText().toString();
         if (email.indexOf('.', email.indexOf('@')) < 0) {
-            Alerts.swowAlertError("проверьте поле E-Mail", this);
+            Alerts.showAlertError("проверьте поле E-Mail", this);
             return false;
         }
         return true;
