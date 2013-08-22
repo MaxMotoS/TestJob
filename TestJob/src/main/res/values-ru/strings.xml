@@ -2,52 +2,52 @@
 <resources>
 
     <string name="app_name">
-        Test job
+        Тестовое задание
     </string>
     <string name="welcome">
-        Welcome!
+        Добро пожаловать!
     </string>
     <string name="description">
-        This program is a test assignment for admission to the School of programmers
+        Эта программа является тестовым заданием для поступления в Школу программистов
     </string>
     <string name="start_button_label">
-        Fill resume
+        Заполнить резюме
     </string>
     <string name="name_label">
-        Name
+        ФИО
     </string>
     <string name="birthday_label">
-        Birthday
+        Дата рождения
     </string>
     <string name="sex_label">
-        Sex
+        Пол
     </string>
     <string name="salary_label">
-        Salary (RUR)
+        Зарплата (руб.)
     </string>
     <string name="phone_label">
-        Phone
+        Мобильный телефон
     </string>
     <string name="email_label">
-        E-mail
+        Электронная почта
     </string>
     <string name="mail_label">
-        Letter to the applicant
+        Письмо соискателю
     </string>
     <string name="send_mail">
-        Send mail
+        Отправить письмо
     </string>
     <string name="name_hint">
-        Ivanov Ivan Ivanovich
+        Иванов Иван Иванович
     </string>
     <string name="birthday_hint">
         01.01.1990
     </string>
     <string name="position_label">
-        Position
+        Должность
     </string>
     <string name="position_hint">
-        Developer
+        Программист
     </string>
     <string name="salary_hint">
         10000
@@ -65,20 +65,20 @@
         Ответ от работадателя
     </string>
     <string name="resume_applicant_title">
-        Resume
+        Резюме
     </string>
     <string name="resume_employer_title">
-        Resume applicant
+        Резюме соискателя
     </string>
     <string-array name="sex_array">
         <item>
-            Select sex
+            Выберите пол
         </item>
         <item>
-            Male
+            Мужской
         </item>
         <item>
-            Female
+            Женский
         </item>
     </string-array>
 

@@ -12,9 +12,9 @@
             android:allowBackup="true"
             android:icon="@drawable/ic_launcher"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme">
+            android:theme="@android:style/Theme.Holo.Light">
         <activity
-                android:name=".MainActivity"
+                android:name=".Main"
                 android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -22,13 +22,12 @@
             </intent-filter>
         </activity>
         <activity
-                android:name=".ApplicantActivity"
-                android:label="@string/label_activity_send_cv">
-
+                android:name=".ApplicantResume"
+                android:label="@string/resume_applicant_title">
         </activity>
         <activity
-                android:name=".EmployerActivity"
-                android:label="@string/label_activity_employer">
+                android:name=".EmployerResume"
+                android:label="@string/resume_employer_title">
         </activity>
 
     </application>

@@ -13,15 +13,15 @@ import android.view.View;
  * Time: 1:34
  * To change this template use File | Settings | File Templates.
  */
-public class MainActivity extends Activity {
+public class Main extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.main);
     }
 
     public void openCvForm(View view) {
-        Intent intent = new Intent(this, ApplicantActivity.class);
+        Intent intent = new Intent(this, ApplicantResume.class);
         startActivity(intent);
     }
 

@@ -27,11 +27,11 @@ public class ApplicantResume extends Activity {
     public static final String FIELD_PHONE = "Phone";
     public static final String FIELD_EMAIL = "E-mail";
     public static final String FIELD_RESPONSE = "Response";
-    public static final int    DIALOG_DATE = 1;
+    public static final int DIALOG_DATE = 1;
 
     EditText name;
     EditText birthday;
-    Spinner  sex;
+    Spinner sex;
     EditText position;
     EditText salary;
     EditText phone;
@@ -44,17 +44,17 @@ public class ApplicantResume extends Activity {
         super.onCreate(savedInstanceState);
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        setContentView(R.layout.activity_applicant);
+        setContentView(R.layout.resume_applicant);
 
-        name =          (EditText) findViewById(R.id.name);
-        birthday =      (EditText) findViewById(R.id.birthday);
-        sex =           (Spinner)  findViewById(R.id.sex);
-        position  =     (EditText) findViewById(R.id.position);
-        salary =        (EditText) findViewById(R.id.salary);
-        phone =         (EditText) findViewById(R.id.phone);
-        email =         (EditText) findViewById(R.id.email);
+        name = (EditText) findViewById(R.id.name);
+        birthday = (EditText) findViewById(R.id.birthday);
+        sex = (Spinner) findViewById(R.id.sex);
+        position = (EditText) findViewById(R.id.position);
+        salary = (EditText) findViewById(R.id.salary);
+        phone = (EditText) findViewById(R.id.phone);
+        email = (EditText) findViewById(R.id.email);
         responseLabel = (TextView) findViewById(R.id.response_label);
-        responseText =  (TextView) findViewById(R.id.response_text);
+        responseText = (TextView) findViewById(R.id.response_text);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.sex_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -81,15 +81,15 @@ public class ApplicantResume extends Activity {
 
         if (fillFields()) {
 
-            Intent intent = new Intent(this, EmployerActivity.class);
+            Intent intent = new Intent(this, EmployerResume.class);
 
-            intent.putExtra(FIELD_NAME,         name.getText().toString());
-            intent.putExtra(FIELD_BIRTHDAY,     birthday.getText().toString());
-            intent.putExtra(FIELD_SEX,          sex.getAdapter().getItem(sex.getSelectedItemPosition()).toString());
-            intent.putExtra(FIELD_POSITION,     position.getText().toString());
-            intent.putExtra(FIELD_SALARY,       salary.getText().toString());
-            intent.putExtra(FIELD_PHONE,        phone.getText().toString());
-            intent.putExtra(FIELD_EMAIL,        email.getText().toString());
+            intent.putExtra(FIELD_NAME, name.getText().toString());
+            intent.putExtra(FIELD_BIRTHDAY, birthday.getText().toString());
+            intent.putExtra(FIELD_SEX, sex.getAdapter().getItem(sex.getSelectedItemPosition()).toString());
+            intent.putExtra(FIELD_POSITION, position.getText().toString());
+            intent.putExtra(FIELD_SALARY, salary.getText().toString());
+            intent.putExtra(FIELD_PHONE, phone.getText().toString());
+            intent.putExtra(FIELD_EMAIL, email.getText().toString());
 
             startActivity(intent);
 
@@ -99,13 +99,13 @@ public class ApplicantResume extends Activity {
 
     private boolean fillFields() {
 
-        if (name.getText().toString().equals("")        ||
-            birthday.getText().toString().equals("")    ||
-            sex.getSelectedItemPosition() == 0          ||
-            position.getText().toString().equals("")    ||
-            salary.getText().toString().equals("")      ||
-            phone.getText().toString().equals("")       ||
-            email.getText().toString().equals("")       ) {
+        if (name.getText().toString().equals("") ||
+                birthday.getText().toString().equals("") ||
+                sex.getSelectedItemPosition() == 0 ||
+                position.getText().toString().equals("") ||
+                salary.getText().toString().equals("") ||
+                phone.getText().toString().equals("") ||
+                email.getText().toString().equals("")) {
 
             Alerts.swowAlertError("Все поля должны быть заполнены", this);
             return false;

@@ -12,8 +12,7 @@
             android:layout_weight="1"
             android:textSize="@dimen/title"
             android:gravity="center"
-            android:layout_gravity="center"
-            />
+            android:layout_gravity="center"/>
 
     <TextView
             android:text="@string/description"
@@ -22,15 +21,13 @@
             android:layout_weight="1"
             android:textSize="20dp"
             android:gravity="center_horizontal"
-            android:layout_gravity="center"
-            />
+            android:layout_gravity="center"/>
 
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/button_fill_cv_form"
+            android:text="@string/start_button_label"
             android:layout_gravity="center"
-            android:onClick="openCvForm"
-            />
+            android:onClick="openCvForm"/>
 
 </LinearLayout>
