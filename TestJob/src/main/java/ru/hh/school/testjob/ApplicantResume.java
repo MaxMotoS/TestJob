@@ -110,7 +110,7 @@ public class ApplicantResume extends FragmentActivity
                 phone.getText().toString().equals("") ||
                 email.getText().toString().equals("")) {
 
-            Alerts.swowAlertError("Все поля должны быть заполнены", this);
+            Alerts.showAlertError("Все поля должны быть заполнены", this);
             return false;
 
         }
@@ -119,7 +119,7 @@ public class ApplicantResume extends FragmentActivity
 // TODO Реализовать проверку е-мейла через регулярные выражения
         if (email.indexOf('.', email.indexOf('@')) < 0) {
 
-            Alerts.swowAlertError("проверьте поле E-Mail", this);
+            Alerts.showAlertError("проверьте поле E-Mail", this);
             return false;
 
         }
