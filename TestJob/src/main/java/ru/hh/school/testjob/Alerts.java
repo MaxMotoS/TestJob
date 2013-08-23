@@ -14,7 +14,8 @@ public class Alerts {
         }
 
     }
-    public static void swowAlertError(String message, Context ctx) {
+
+    public static void showAlertError(String message, Context ctx) {
         AlertDialog.Builder builder = new AlertDialog.Builder(ctx);
         builder.setTitle("Ошибка");
         builder.setMessage(message);
