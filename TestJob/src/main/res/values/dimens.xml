@@ -3,5 +3,5 @@
     <dimen name="field_label_text_size">16dp</dimen>
     <dimen name="title_mail">20dp</dimen>
     <dimen name="title">20dp</dimen>
-    <dimen name="response_text_padding">5dp</dimen>
+    <dimen name="response_text_padding">15dp</dimen>
 </resources>

@@ -1,13 +1,15 @@
 package ru.hh.school.testjob;
 
-import android.app.Activity;
-import android.app.DatePickerDialog;
-import android.app.Dialog;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
+import android.support.v4.app.FragmentActivity;
 import android.view.View;
-import android.widget.*;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.TextView;
 
 /**
  * Created with IntelliJ IDEA.
@@ -17,7 +19,8 @@ import android.widget.*;
  * To change this template use File | Settings | File Templates.
  */
 
-public class ApplicantResume extends Activity {
+public class ApplicantResume extends FragmentActivity
+        implements DatePickerFragment.OnDateSelectedListener {
 
     public static final String FIELD_NAME = "Name";
     public static final String FIELD_BIRTHDAY = "Birthday";
@@ -65,7 +68,7 @@ public class ApplicantResume extends Activity {
 
             name.setText(intent.getStringExtra(FIELD_NAME));
             birthday.setText(intent.getStringExtra(FIELD_BIRTHDAY));
-            // TODO реализовать поиск значения позиции в массиве пола
+// TODO реализовать поиск значения позиции в массиве пола
             position.setText(intent.getStringExtra(FIELD_POSITION));
             salary.setText(intent.getStringExtra(FIELD_SALARY));
             phone.setText(intent.getStringExtra(FIELD_PHONE));
@@ -113,7 +116,7 @@ public class ApplicantResume extends Activity {
         }
 
         String email = ((EditText) findViewById(R.id.email)).getText().toString();
-        // TODO Реализовать проверку е-мейла через регулярные выражения
+// TODO Реализовать проверку е-мейла через регулярные выражения
         if (email.indexOf('.', email.indexOf('@')) < 0) {
 
             Alerts.swowAlertError("проверьте поле E-Mail", this);
@@ -125,34 +128,13 @@ public class ApplicantResume extends Activity {
 
     }
 
-    // TODO Переписать всплывающее окно для выбора даты
-
-    public void selectedDate(View view) {
-
-        showDialog(DIALOG_DATE);
-
+    public void selectDate(View view) {
+        DialogFragment newFragment = new DatePickerFragment();
+        newFragment.show(getSupportFragmentManager(), "datePicker");
     }
 
-    protected Dialog onCreateDialog(int id) {
-
-        if (id == DIALOG_DATE) {
-
-            DatePickerDialog datePickerDialog = new DatePickerDialog(this, myCallBack, 1, 2, 1990);
-            return datePickerDialog;
-
-        }
-
-        return super.onCreateDialog(id);
-
+    @Override
+    public void onDateSelected(int year, int month, int day) {
+        birthday.setText(String.format("%02d.%02d.%04d", day, month, year));
     }
-
-    DatePickerDialog.OnDateSetListener myCallBack = new DatePickerDialog.OnDateSetListener() {
-
-        public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-
-            birthday.setText(String.format("%02d.%02d.%04d", dayOfMonth, monthOfYear, year));
-
-        }
-    };
-
 }

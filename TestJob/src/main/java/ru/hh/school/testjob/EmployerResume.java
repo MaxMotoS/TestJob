@@ -35,6 +35,7 @@ public class EmployerResume extends Activity {
         salary = (TextView) findViewById(R.id.salary);
         phone = (TextView) findViewById(R.id.phone);
         email = (TextView) findViewById(R.id.email);
+        mail = (EditText) findViewById(R.id.mail);
 
         name.setText(intent.getStringExtra(ApplicantResume.FIELD_NAME));
         birthday.setText(intent.getStringExtra(ApplicantResume.FIELD_BIRTHDAY));
@@ -46,7 +47,7 @@ public class EmployerResume extends Activity {
 
     }
 
-    public void sendAnswer(View view) {
+    public void sendMail(View view) {
 
         Intent intent = new Intent(this, ApplicantResume.class);
         intent.putExtra(ApplicantResume.FIELD_NAME, name.getText().toString());

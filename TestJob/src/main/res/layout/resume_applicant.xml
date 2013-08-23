@@ -31,8 +31,9 @@
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
                 android:hint="@string/birthday_hint"
+                android:inputType="date"
                 android:focusable="false"
-                android:onClick="selectedDate"/>
+                android:onClick="selectDate"/>
 
         <TextView
                 android:text="@string/sex_label"
@@ -103,6 +104,7 @@
         <TextView
                 android:id="@+id/response_label"
                 android:text="@string/response_label"
+                android:textSize="@dimen/title_mail"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:visibility="invisible"/>
