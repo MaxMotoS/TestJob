@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+            android:text="@string/mail_label"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/title_mail"/>
+
+    <EditText
+            android:id="@+id/mail"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:inputType="textMultiLine"
+            android:gravity="top"
+            android:minLines="5"/>
+
+    <Button
+            android:id="@+id/send_mail"
+            android:text="@string/send_mail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="sendMail"
+            android:layout_gravity="right"/>
+
+</LinearLayout>
